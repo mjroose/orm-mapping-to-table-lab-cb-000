@@ -6,6 +6,7 @@ class Student
     @name = name
     @grade = grade
     @id = id
+    student
   end
 
   def self.create_table
@@ -29,5 +30,9 @@ class Student
     sql_get_id = "SELECT last_insert_rowid();"
     @id = DB[:conn].execute(sql_get_id).flatten.first
     self
+  end
+
+  def create(attributes)
+    student = self.class.new(attributes[:name], attributes[:grade])
   end
 end
