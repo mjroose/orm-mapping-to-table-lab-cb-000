@@ -22,4 +22,8 @@ class Student
     sql_drop_table = "DROP TABLE students;"
     DB[:conn].execute(sql_drop_table)
   end
+
+  def save(student)
+
+  end
 end
