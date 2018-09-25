@@ -6,7 +6,7 @@ class Student
     @name = name
     @grade = grade
     @id = id
-    student
+    self
   end
 
   def self.create_table
@@ -33,6 +33,6 @@ class Student
   end
 
   def create(attributes)
-    student = self.class.new(attributes[:name], attributes[:grade])
+    self.class.new(attributes[:name], attributes[:grade]).save
   end
 end
